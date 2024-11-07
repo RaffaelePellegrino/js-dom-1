@@ -3,15 +3,16 @@ const immagineLampadina = document.getElementById("immagine-lampadina")
 const body = document.body;
 
 statoLampadina.addEventListener("click",function(){
-    const cambio = statoLampadina;
-    if(cambio.textContent === "Accendi"){
-        cambio.textContent = "Spegni";
+    if(statoLampadina.textContent === "Accendi"){
+        statoLampadina.textContent = "Spegni";
         immagineLampadina.src = "img/yellow_lamp.png";
         body.classList.add("dark")
+        statoLampadina.classList.add("dark")
     }else{
-        cambio.textContent = "Accendi";
+        statoLampadina.textContent = "Accendi";
         immagineLampadina.src = "img/white_lamp.png";
         body.classList.remove("dark")
+        statoLampadina.classList.remove("dark")
     }
 })
 
